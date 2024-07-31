@@ -2,6 +2,9 @@ const fs = require("fs");
 module.exports = () => {
   try {
     fs.readdir(`${process.cwd()}/process.events`, (_err, files) => {
+      if (_err) {
+        throw new Error(_err)
+      }
       files.forEach((file) => {
         if (!file.endsWith(".js")) return;
         const event = require(`${process.cwd()}/process.events/${file}`);

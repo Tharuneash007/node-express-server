@@ -1,5 +1,6 @@
 const app = require("./app");
 require("dotenv").config();
+require("./database/database")
 
 app.listen(process.env.PORT || "9090", () => {
   console.log(`Application is running on port ${process.env.PORT || "9090"}`);
