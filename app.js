@@ -21,8 +21,7 @@ db.connect((err, client) => {
   if (err) {
     console.log(chalk.red("unable to connect to the database!"));
   }
-
-  console.log(chalk.green("database connected"), client);
+  console.log(chalk.green("database connected"));
 });
 
 // Allow Cross-Origin requests
